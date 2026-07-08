@@ -4,7 +4,7 @@ metadata:
   name: student-reg-service
 spec:
   selector:
-    app: student-reg-app  # Updated to match your deployment label
+    app: student-reg # Updated to match your deployment label
   ports:
     - protocol: TCP
       port: 80
