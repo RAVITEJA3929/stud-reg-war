@@ -3,9 +3,10 @@ kind: Service
 metadata:
   name: student-reg-service
 spec:
-  ports:
-    - port: 80
-      targetPort: 8080
   selector:
-    app: student-reg-app
+    app: student-reg-app  # Updated to match your deployment label
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
   type: LoadBalancer
