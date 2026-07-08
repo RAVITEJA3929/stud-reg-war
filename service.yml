@@ -1,0 +1,15 @@
+vi service.yml
+Press "i"
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: student-reg-service
+spec:
+  selector:
+    app: student-reg
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: LoadBalancer
