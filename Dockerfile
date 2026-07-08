@@ -9,7 +9,7 @@ RUN rm -rf /usr/local/tomcat/webapps/*
 
 # Copy the build artifact from Maven target directory
 # The Jenkins workspace will have the .war file after the 'mvn package' stage
-COPY target/*.war /usr/local/tomcat/webapps/student.war
+COPY target/*.war /usr/local/tomcat/webapps/ROOT.war
 
 EXPOSE 8080
 
