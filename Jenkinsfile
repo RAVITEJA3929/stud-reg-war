@@ -39,8 +39,7 @@ pipeline {
                     
                     // Using envsubst if you want to inject the build number into the manifest
                     // Otherwise, applying the latest tag works for static manifests
-                    sh "kubectl apply -f deployment.yml"
-                    sh "kubectl apply -f service.yml"
+                    sh "kubectl apply -f deployment-service.yml"
                     
                     // Force a rollout to ensure the new image is pulled
                     sh "kubectl rollout restart deployment/student-reg-app"
